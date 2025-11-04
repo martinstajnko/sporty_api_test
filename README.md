@@ -9,7 +9,7 @@
 ## Project Overview
 This repository contains automated test cases for the [JokeAPI](https://v2.jokeapi.dev/) - a free API for jokes.
 
-The test suite includes **4 comprehensive test methods** with **13+ test scenarios** covering:
+The test suite includes **4 comprehensive test methods** with **13 test scenarios** covering:
 - ✅ **Joke retrieval by category** - Tests different joke categories with parametrization (5 scenarios)
 - ✅ **Language support validation** - Tests supported languages and language codes (6 scenarios) 
 - ✅ **Content flags validation** - Tests blacklist flags and timestamp format
