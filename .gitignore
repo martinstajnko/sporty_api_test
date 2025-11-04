@@ -1,0 +1,7 @@
+test_jokeapi.py
+test_jokeapi_async.py
+NOTES.md
+.pytest_cache/
+__pycache__/
+.vscode/
+.env
