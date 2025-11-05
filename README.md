@@ -22,11 +22,12 @@ The test suite includes **4 comprehensive test methods** with **13 test scenario
 ```plaintext
 sporty_api_tests/
 ├── tests/
-│   └── test_api.py          # Main test suite for JokeAPI
-├── conftest.py              # Pytest fixtures (e.g., api_session, base_url)
+│   ├── test_api.py          # Main test suite for JokeAPI
+│   └── conftest.py              # Pytest fixtures
 ├── enums.py                 # Enums for categories, languages, status codes
 ├── constants.py             # Constants like base URL, default language
 ├── README.md                # Project documentation and setup instructions
+├── poetry.lock              # Poetry lock file
 └── pyproject.toml           # Poetry configuration and dependencies
 ```
 
@@ -88,7 +89,9 @@ poetry run pytest tests/test_api.py::TestJokeAPI::test_get_joke_by_category -v -
 - **Test Methods**: 4 comprehensive test functions
 - **Test Scenarios**: 13 individual test executions (5 + 1 + 6 + 1)
 - **API Endpoints**: 4 different JokeAPI endpoints tested
-- **Validation Types**: 7 distinct validation methods applied
+- **Categories Tested**: Any, Programming, Dark, Misc, NonExisting (invalid)
+- **Languages Tested**: English, German, Spanish, French, Portuguese, Czech 
+- **Validation Types**: 8 distinct validation methods applied
 - **Edge Cases**: Invalid categories, error responses, data type mismatches
 
 ## Validation Methods Explained
@@ -167,16 +170,6 @@ if expected_status == HttpStatusCodes.HTTP_BAD_REQUEST:
 - **Why**: Validates API gracefully handles invalid inputs with proper error responses
 - **Used in**: `test_get_joke_by_category` (NonExisting category)
 - **Benefits**: Ensures robust error handling and meaningful error messages for debugging
-
-## Total Test Coverage
-
-- **Test Methods**: 4 comprehensive test functions
-- **Test Scenarios**: 13 individual test executions
-- **API Endpoints**: 4 different JokeAPI endpoints
-- **Categories Tested**: Any, Programming, Dark, Misc, NonExisting (invalid)
-- **Languages Tested**: English, German, Spanish, French, Portuguese, Czech  
-- **Validation Methods**: 8 distinct validation types
-- **Code Organization**: Enums, constants, and fixtures for maintainability
 
 ## API Endpoints Tested
 
