@@ -1,4 +1,4 @@
-# Sporty Home Test: API Tests 
+# Playwright with Python API testing DEMO 
 
 ## 🎥 Demo
 
